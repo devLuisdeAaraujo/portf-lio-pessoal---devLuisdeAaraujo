@@ -1,0 +1,411 @@
+/*Adicionando margens*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+section {
+  min-height: 100vh;
+}
+
+.about_me {
+  position: relative; /* ou absolute/fixed se necessário */
+  z-index: 9999; /* valor alto para ficar acima de outros elementos */
+  margin-top: 35px;
+  color: #fff;
+  font-family: 'Segoe UI', sans-serif;
+  min-height: 100vh;
+  padding: 2rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.about_me_tittle{
+  font-size: 2rem;
+  z-index: 1000;
+  position: relative;
+  color: #1e78ff
+  ;
+}
+.box {
+  max-width: 500px;
+  text-align: left;
+}
+.box h1{
+  margin-top: 5%;
+  color: #1e80ff;
+}
+.box p{
+
+  font-size:1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+.box button{
+  
+  margin-top: 10px;
+  background: #1E90FF;
+  color: white;
+  padding: 20px 20px;
+  border-radius: 50px;
+  
+  
+ 
+}
+
+
+
+/*Corpo do site: Padrão de fonte, background*/
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #0f0f1a;
+  color: #fff;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y:auto;
+  position: relative;
+  scroll-behavior: smooth;
+  
+}
+/*Aqui posicionamento do carrossel de projetos, experimentos,etcc*/
+#nav_center{
+  position: absolute;
+  top: 100px;
+  right: 720px;
+  transition: top 0.3s;
+  letter-spacing: 1px;
+  font-size: 24px;
+  transition: transform 0.3s ease;
+  z-index: 1000;
+  
+}
+/*Adiciono um espaço entre eles*/
+#nav_center ul {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  list-style: none;
+}
+
+/*Caracterizindo a nav a*/
+#nav_center a {
+  text-decoration: none;
+  color: #ccc;
+  font-weight: 500;
+}
+
+
+  
+  
+  
+
+
+
+/* Hero section */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+}
+
+.paragraph {
+  font-size: 1.4rem;
+}
+
+.border_text {
+  display: inline-block;
+  border: 2px solid #1E90FF; 
+  border-radius:  5%;
+  padding: 2px 30px;
+}
+
+.content h1 {
+  font-size: 2.2rem;
+  font-weight: bold;
+}
+
+.subtitle {
+  display: flex;
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin-top: 1px;
+  justify-content: center;
+  text-align: center;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 140px;
+  background: #1E90FF;
+  color: white;
+  padding: 20px 30px;
+  text-decoration: none;
+  border-radius: 10rem;
+  text-transform: uppercase;
+  font-size: 1rem;
+  letter-spacing: .15rem;
+  transition: all .3s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+
+.btn::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #1e78ff;
+  border-radius: 10rem;
+  z-index: -2;
+}
+
+
+.btn::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  color: #fff;
+  background-color: #008cff;
+  transition: all .3s;
+  border-radius: 10rem;
+  z-index: -1;
+}
+
+.btn:hover::before {
+  width: 100%;
+}
+
+/* Social */
+.social {
+  position: relative;
+  align-items: center;
+  top: 59%;
+  justify-content: center;
+  display: flex;
+  gap: 15px;
+  margin: 5px;
+  
+}
+
+.social svg {
+  border: 0.8px solid #D3D3D3;   /* Borda visível e branca */
+  border-radius: 100%;        /* Formato circular */
+  padding: 10px;             /* Espaçamento interno */
+  background-color: transparent;  /* Fundo transparente */
+  transition: transform 0.8s ease, border-color 0.6s ease;
+  ;
+}
+
+.social svg:hover {
+  transform: scale(1.4);
+  border-color: #00bfff; /* Exemplo: muda a borda ao passar o mouse */
+}
+
+
+
+.logo-topo {
+  position: absolute;
+  top: 78px;
+  left: 100px;
+  text-decoration: none;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: white;
+  z-index: 999;
+  
+}
+
+
+
+
+/*Adiciona cor azul */
+.logo-topo span {
+  color: #00bfff;
+}
+
+
+
+
+@media (max-width: 500px) {
+  nav {
+    position: static;
+    text-align: center;
+    font-size: 14px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    margin-top: 15%;
+    gap: 5px;
+    
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    margin-top: -90%;
+    padding: 16px;
+  }
+
+  .border_text{
+    font-size: 1rem;;
+  }
+  .border_text span{
+    font-size: 1rem;
+  }
+
+  .content h1 {
+    font-size: 1.2rem;
+  }
+
+  .subtitle {
+    font-size: 1.2rem;
+  }
+
+  .btn {
+    padding: 12px 20px;
+    margin-top: 35%;
+    padding: 18px 25px;
+  }
+
+  .social {
+    
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 250px;
+    transition: transform 0.8s ease, border-color 0.6s ease;
+  }
+  .social svg:hover {
+    transform: scale(1.4);
+    border-color: #00bfff; /* Exemplo: muda a borda ao passar o mouse */
+  }
+
+  .logo-topo {
+    position: static;
+    display: block;
+    text-align: center;
+
+    margin-top: 20px;
+  }
+}
+
+#splash {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0f0f1a;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 9999; 
+  overflow: hidden;
+  transition: opacity 1s ease-out;
+  
+}
+splash.no-scroll{
+  overflow: hidden;
+}
+.splash-content h1{
+  font-size: 3rem;
+}
+.splash-content span {
+  font-size: 3rem;
+  color: #00bfff; /* Azul bonito */
+}
+
+.splash-content p {
+
+  align-items: center;
+  display: flex;
+  font-size: 1.2rem;
+  color: #ccc;
+}
+.arrow-container {
+  position: absolute;         /* Fixa no viewport */
+  bottom: 10px;            /* Distância do fundo */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 100px;
+  display: block;
+  cursor: pointer;
+}
+
+.arrow {
+  position: absolute;
+  left: 50%;
+  width: 0;
+  height: 0;
+  opacity: 0.3;
+  transition: top 0.4s ease, opacity 0.4s ease;
+}
+
+.arrow::before,
+.arrow::after {
+  content: '';
+  position: absolute;
+  width: 1px;
+  height: 25px;
+  background: white;
+  border-radius: 10px;
+  transition: transform 0.4s ease;
+}
+
+.arrow::before {
+  transform-origin: bottom right;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.arrow::after {
+  transform-origin: bottom left;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+/* Posição inicial das 3 setas */
+.arrow:nth-child(1) {
+  top: 20%;
+  opacity: 0.3;
+}
+.arrow:nth-child(2) {
+  top: 40%;
+  opacity: 0.6;
+}
+.arrow:nth-child(3) {
+  top: 60%;
+  opacity: 1;
+}
+
+/* Hover: colapsa em uma só */
+.arrow-container:hover .arrow {
+  top: 50%;
+  opacity: 1;
+}
+
+.arrow-container:hover .arrow::before {
+  transform: translate(-50%, -50%) rotate(-30deg);
+}
+.arrow-container:hover .arrow::after {
+  transform: translate(-50%, -50%) rotate(30deg);
+}
